@@ -1,4 +1,4 @@
-//Autoupdating current day and time
+
 var datetime = null,
   date = null;
 
@@ -18,25 +18,7 @@ console.log(currentTime);
 //
 var container = $(".container");
 
-// //save textarea to local storage
-// $(function () {
-//   $(".saveBtn").onclick(function () {
-//     var savedData = $("planData").val();
-//   });
-//   localStorage.setItem("savedData", value);
-// });
 
-// // fill textarea from local storage if it exists
-// $('#load').on('click', function(){
-//   $('input[type="text"]').each(function(){
-//       var savedData = $("planData").attr(savedData);
-//       var value = localStorage.getItem(savedData);
-
-//       $(this).val(value);
-
-//   });
-
-//annoying bracket - braces - bracket array (for adding rows)
 var scheduleArr = [
   {
     id: "0",
@@ -103,9 +85,8 @@ var scheduleArr = [
   },
 ];
 
-//pulls from schedule array
+
 scheduleArr.forEach(function (currentHour) {
-  // make the new row
   var hourRow = $("<form>").attr({
     class: "row",
   });
@@ -118,7 +99,7 @@ scheduleArr.forEach(function (currentHour) {
       class: "col-md-2 hour",
     });
 
-  // make text box appending html elements with bootstrap classes as well as ids pulled from the schedule array
+  
   var hourPlan = $("<div>").attr({
     class: "col-8 description px-0",
   });
@@ -140,7 +121,7 @@ scheduleArr.forEach(function (currentHour) {
     });
   }
 
-  // make save button
+  
   var saveButton = $("<i class='far fa-save fa-lg'></i>");
   var saveText = $("<button>").attr({
     class: "col-md-1 saveBtn",
